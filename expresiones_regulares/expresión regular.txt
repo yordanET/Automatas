@@ -1,0 +1,45 @@
+1.Desarrollar una expresión regular para encontrar todas las líneas que comienzan
+con la palabra “Start”
+Expresion regular:(^Start)
+2.Realizar una expresión regular para encontrar todas las líneas que terminan con la
+palabra "end".
+Expresion regular:(end$)
+3.Realizar una expresión regular para encontrar la palabra " whole" solo cuando es
+una palabra completa.
+Expresion regular:(\bwhole\b)
+4.Realizar una expresión regular para encontrar la palabra "foo" solo si es seguida
+por "bar".
+Expresion regular:foo(?=bar)
+5.Realizar una expresión regular para encontrar la palabra "foo" solo si no es seguida
+por "bar".
+Expresion regular: foo(?!bar)
+6.Realizar una expresión regular para encontrar la palabra "bar" solo si es precedida
+por "foo".
+Expresion regular: (?<=foo)bar
+7.Realizar una expresión regular para encontrar la palabra "bar" solo si no es
+precedida por "foo".
+Expresion regular:(?<!foo)bar
+8.Realizar una expresión regular para encontrar la palabra "Hello" solo si está al
+inicio del texto completo.
+Expresion regular:(^\bHello\b)
+9.Realizar una expresión regular para encontrar la palabra "goodbye" solo si está al
+final del texto completo.
+Expresion regular:(\bgoodbye\b.)$
+10. Realizar una expresión regular para encontrar la secuencia "mid" solo si no está
+en un borde de palabra.
+Expresion regular:(?<!\b)mid(?!\b)
+
+EJERCICIOS DE APRENDIZAJE EXTRA
+
+1. Realizar una expresión regular para validar números de tarjeta de crédito que
+cumplan con las siguientes condiciones:
+▪ Los números deben estar agrupados en bloques de 4 dígitos.
+▪ Cada bloque debe estar separado por un espacio o un guión.
+▪ Debe haber un total de 4 bloques (16 dígitos en total).
+Expresion regular:(([0-9]{1,4})[- ][0-9]{1,4}[- ][0-9]{1,4}[- ][0-9]{1,4})
+2. Realizar una expresión regular para encontrar y extraer texto que esté entre
+comillas dobles, pero que no esté precedido por una barra invertida (\)
+Expresion regular:(?<!\\)".*?(?<!\\)"
+3. Realizar una expresión regular para encontrar fechas en formato DD/MM/YYYY
+donde el día esté entre 01 y 31, el mes entre 01 y 12 y el año entre 1900 y 2099.
+Expresion regular:^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/([0-9]{4})$

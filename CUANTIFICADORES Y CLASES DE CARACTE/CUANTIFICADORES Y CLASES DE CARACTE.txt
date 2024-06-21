@@ -1,0 +1,61 @@
+CUANTIFICADORES Y CLASES DE CARACTERES
+
+Encontrar palabras de al menos 3 letras:
+Prueba: "El perro corre rápido"
+EXPRESION REGULAR:\b[a-zA-ZáéíóúñÁÉÍÓÚÜÑ]{3,}\b
+
+Detectar números con al menos 2 dígitos:
+Prueba: "123, 45, 6789"
+EXPRESION REGULAR:\b[1-9]{2,}\b
+
+Identificar palabras que comiencen con una vocal:
+Prueba: "Análisis de los eventos"
+EXPRESION REGULAR:\b[aeiouAEIOU][a-zA-ZáéíóúñÁÉÍÓÚÜÑ]*\b 
+
+Capturar cadenas de caracteres alfanuméricos de exactamente 5 caracteres:
+Prueba: "abc12 def34 ghi56 jkl78"
+EXPRESION REGULAR:\b[a-zA-Z0-9]{5}\b
+ 
+Encontrar direcciones IP (formato simplificado):
+Prueba: "La IP es 192.168.1.1 y la otra es 10.0.0.1"
+EXPRESION REGULAR: \b(?:\d{1,3}\.){3}\d{1,3}\b
+
+Detectar palabras que contengan una secuencia de exactamente 2 vocales consecutivas:
+Prueba: "Leer, actuar, reunir"
+EXPRESION REGULAR:\b\w*[aeiouAEIOU]{2}\w\b
+
+Encontrar números telefónicos en formato (123) 456-7890:
+Prueba: "Mi número es (123) 456-7890"
+EXPRESION REGULAR:\(\b[0-9]{3}\)\ [0-9]{3}-[0-9]{4}\b
+
+Identificar palabras que terminen en 'ing':
+Prueba: "I am running and singing"
+EXPRESION REGULAR:\b[áéíóúñÁÉÍÓÚÑa-zA-Z]{3,}ing\b
+
+Detectar palabras con al menos una letra mayúscula:
+Prueba: "Este es un Texto de Prueba"
+EXPRESION REGULAR:\b(?:[áéíóúüñÁÉÍÓÚÜÑa-z]*[A-Z][áéíóúüñÁÉÍÓÚÜÑa-z]*)+\b
+
+Capturar secuencias de uno o más dígitos, seguidas por una letra:
+Prueba: "123a 456b 789c"
+EXPRESION REGULAR:\d+[a-zA-Z]\b
+
+Encontrar palabras que contengan solo letras minúsculas:
+Prueba: "esto es una prueba con minusculas"
+EXPRESION REGULAR:\b[a-z]+\b
+
+Detectar cadenas que contengan al menos una letra mayúscula y al menos un número:
+Prueba: "Abc123 y XyZ456"
+EXPRESION REGULAR:\b(?=.[A-Z])(?=.\d)[A-Za-z\d]+\b
+
+Identificar códigos postales en formato de 5 dígitos:
+Prueba: "Mis códigos son 12345 y 67890"
+EXPRESION REGULAR:[0-9]{5}
+
+Capturar secuencias de letras que contengan exactamente 3 letras minúsculas:
+Prueba: "abc def ghi jkl mno"
+EXPRESION REGULAR:\b[a-z]{3}\b
+
+Encontrar palabras que empiecen con una consonante:
+Prueba: "Casa, elefante, perro, iguana"
+EXPRESION REGULAR:\b[^aeiouAEIOU][a-zA-Z]+\b
